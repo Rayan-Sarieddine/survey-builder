@@ -4,6 +4,7 @@ const surveyschema = new mongoose.Schema({
   title: {
     type: String,
     required: true,
+    unique: true,
   },
   category: {
     type: String,

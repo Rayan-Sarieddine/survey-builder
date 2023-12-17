@@ -6,6 +6,8 @@ require("dotenv").config();
 
 const authRoutes = require("./routes/auth.routes");
 app.use("/auth", authRoutes);
+const surveyRoutes = require("./routes/survey.routes");
+app.use("/survey", surveyRoutes);
 
 app.listen(8000, () => {
   console.log("listening");
