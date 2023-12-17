@@ -8,7 +8,8 @@ const authRoutes = require("./routes/auth.routes");
 app.use("/auth", authRoutes);
 const surveyRoutes = require("./routes/survey.routes");
 app.use("/survey", surveyRoutes);
-
+const questionRoutes = require("./routes/question.routes");
+app.use("/question", questionRoutes);
 app.listen(8000, () => {
   console.log("listening");
   connectToMongoDb();
