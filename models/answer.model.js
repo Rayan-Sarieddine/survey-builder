@@ -1,21 +1,12 @@
 const mongoose = require("mongoose");
 
 const answerchema = new mongoose.Schema({
-  answer_a: {
-    type: string,
+  answers: {
+    type: Object,
     required: true,
   },
-  answer_b: {
-    type: string,
-  },
-  answer_c: {
-    type: string,
-  },
-  answer_d: {
-    type: string,
-  },
-  correct_answer: {
-    type: string,
+  correct_answers: {
+    type: Object,
     required: true,
   },
   question_id: {

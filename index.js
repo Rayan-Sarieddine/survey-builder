@@ -10,6 +10,9 @@ const surveyRoutes = require("./routes/survey.routes");
 app.use("/survey", surveyRoutes);
 const questionRoutes = require("./routes/question.routes");
 app.use("/question", questionRoutes);
+const answerRoutes = require("./routes/answer.routes");
+app.use("/answer", answerRoutes);
+
 app.listen(8000, () => {
   console.log("listening");
   connectToMongoDb();
