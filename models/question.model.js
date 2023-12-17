@@ -1,21 +1,17 @@
 const mongoose = require("mongoose");
 
-const surveyschema = new mongoose.Schema({
-  title: {
+const questionschema = new mongoose.Schema({
+  question: {
     type: String,
     required: true,
   },
-  category: {
+  explanation: {
     type: String,
     required: true,
   },
-  belongs_to: {
+  survey_id: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "User",
+    ref: "Survey",
     required: true,
   },
 });
-
-const Survey = mongoose.model("Survey", surveyschema);
-
-module.exports = Survey;
