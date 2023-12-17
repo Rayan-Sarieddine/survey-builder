@@ -4,8 +4,8 @@ const app = express();
 app.use(express.json());
 require("dotenv").config();
 
-// const authRoutes = require("./routes/auth.routes");
-// app.use("/auth", authRoutes);
+const authRoutes = require("./routes/auth.routes");
+app.use("/auth", authRoutes);
 
 app.listen(8000, () => {
   console.log("listening");

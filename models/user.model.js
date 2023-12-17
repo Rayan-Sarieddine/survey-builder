@@ -13,18 +13,16 @@ const userschema = new mongoose.Schema({
   },
   name: {
     type: String,
-    minlength: 5,
     required: true,
   },
-  img_url: {
-    type: String,
-    minlength: 5,
-    required: true,
-  },
+
   role_id: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Role",
     required: true,
+  },
+  img_url: {
+    type: String,
   },
 });
 
