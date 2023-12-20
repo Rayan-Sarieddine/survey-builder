@@ -1,0 +1,24 @@
+.reg-form {
+  border-radius: 30px;
+  box-shadow: 0 0 40px 5px rgba(0, 0, 0, 0.2);
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+}
+.registerform-pair {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.registerform-pair input {
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 1px solid #333;
+}
+.reg-btn {
+  width: 4rem;
+  margin: 0 auto;
+  border-radius: 10px;
+}

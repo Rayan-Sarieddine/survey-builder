@@ -20,7 +20,7 @@ const login = async (req, res) => {
     process.env.JWT_SECRET,
     { algorithm: "HS256", expiresIn: "2 days" }
   );
-  res.status(200).send({ user: userDetails, token: token });
+  res.status(200).send({ user: userDetails, token: token, status: "success" });
 };
 
 const register = async (req, res) => {
@@ -37,7 +37,7 @@ const register = async (req, res) => {
     });
     //or  const user = await User.create({ username, password, firstName, lastName });
     await user.save();
-    res.status(200).send(user);
+    res.status(200).send({ user, status: "success" });
   } catch (error) {
     console.log(error);
     res.status(500).send({ error });

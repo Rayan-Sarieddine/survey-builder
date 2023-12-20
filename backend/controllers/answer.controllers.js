@@ -34,7 +34,10 @@ const createAnswer = async (req, res) => {
 const getAlAnswersOfQuestion = async (req, res) => {
   const id = req.params.id;
   try {
-    const surveyanswers = await Answer.find({ question_id: id });
+    const surveyanswers = await Answer.find({ question_id: id }).populate(
+      "question_id",
+      "question"
+    );
     res.status(200).send({ answer_key: surveyanswers });
   } catch (e) {
     res.status(500).send({ message: e.message });
